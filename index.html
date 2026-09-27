@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Thomas Gurney: Aero-Mechanical Engineering student at the University of Strathclyde and AIV lead on the STRATHcube CubeSat.">
+<title>Thomas Gurney Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..600&display=swap">
+<style>
+:root{
+  --page:#E9EDF2;
+  --dot:rgba(19,35,58,.13);
+  --card:#FFFFFF;
+  --ink:#0F1A28;
+  --soft:#4A5768;
+  --line:#D2D9E1;
+  --navy:#0F1E33;
+  --navy-2:#162A45;
+  --on-navy:#F1F4F8;
+  --on-navy-soft:#A9B8CA;
+  --navy-line:rgba(255,255,255,.14);
+  --orange:#FF6B2C;
+  --on-orange:#0F1A28;
+  --accent-text:#B93E0B;
+  --tag:#E3E9F0;
+  --shadow:0 1px 2px rgba(15,26,40,.06),0 8px 24px rgba(15,26,40,.07);
+  --font:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --page:#0B121C;--dot:rgba(169,184,202,.10);--card:#131D2A;--ink:#E8EDF3;--soft:#9CABBD;--line:#233142;
+    --navy:#060C15;--navy-2:#0F1A28;--on-navy:#F1F4F8;--on-navy-soft:#9FB0C4;--navy-line:rgba(255,255,255,.10);
+    --orange:#FF7A3D;--on-orange:#0B121C;--accent-text:#FF9A6A;--tag:#1B2837;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#0B121C;--dot:rgba(169,184,202,.10);--card:#131D2A;--ink:#E8EDF3;--soft:#9CABBD;--line:#233142;
+  --navy:#060C15;--navy-2:#0F1A28;--on-navy:#F1F4F8;--on-navy-soft:#9FB0C4;--navy-line:rgba(255,255,255,.10);
+  --orange:#FF7A3D;--on-orange:#0B121C;--accent-text:#FF9A6A;--tag:#1B2837;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{
+  background-color:var(--page);
+  background-image:radial-gradient(var(--dot) 1.3px,transparent 1.4px);
+  background-size:22px 22px;
+  color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+p{margin:0}
+h1,h2,h3,h4{margin:0;font-weight:700;letter-spacing:-.015em;text-wrap:balance}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:24px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;color:var(--on-navy);background:var(--navy);overflow:hidden;isolation:isolate}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:url("images/estec-fdr.jpg") center 38%/cover no-repeat;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(9,18,32,.96) 0%,rgba(9,18,32,.88) 42%,rgba(9,18,32,.45) 100%),
+             linear-gradient(0deg,rgba(9,18,32,.85) 0%,rgba(9,18,32,0) 45%);
+}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px 24px;flex-wrap:wrap;padding-block:22px}
+.topbar .name{font-weight:700;text-decoration:none;font-size:17px}
+.topbar nav{display:flex;gap:6px 22px;flex-wrap:wrap}
+.topbar nav a{text-decoration:none;color:var(--on-navy-soft);font-size:15px}
+.topbar nav a:hover{color:var(--on-navy)}
+.intro{padding-block:72px 96px;display:grid;gap:22px;max-width:640px}
+.intro h1{font-size:clamp(44px,7.5vw,76px);line-height:1;letter-spacing:-.035em;font-weight:780}
+.intro h1 span{color:var(--orange)}
+.intro .lede{font-size:clamp(18px,2.2vw,21px);line-height:1.5}
+.intro .now{display:inline-flex;gap:10px;align-items:center;font-size:15px;font-weight:600;color:var(--on-orange);background:var(--orange);padding:6px 12px;border-radius:999px;justify-self:start}
+.intro .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.35);text-decoration:none;font-size:15px;font-weight:600;color:var(--on-navy)}
+.pill:hover{border-color:#fff}
+.pill.solid{background:var(--on-navy);color:#0F1A28;border-color:var(--on-navy)}
+.pill.solid:hover{background:#fff}
+.credit{position:absolute;right:16px;bottom:12px;font-size:12px;color:rgba(255,255,255,.6)}
+
+/* ---------- sections ---------- */
+section{padding-block:80px}
+.head{display:grid;gap:10px;margin-bottom:40px;max-width:680px}
+.head h2{font-size:clamp(30px,4.2vw,42px);line-height:1.08;letter-spacing:-.025em}
+.head p{color:var(--soft)}
+.kicker{font-size:14px;font-weight:700;color:var(--accent-text);letter-spacing:.04em;text-transform:uppercase}
+
+.project{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:36px;display:grid;gap:32px}
+.project + .project{margin-top:28px}
+.project-top{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:32px 48px;align-items:start}
+.project-top.solo{grid-template-columns:1fr}
+.project h3{font-size:clamp(24px,3vw,30px);line-height:1.15}
+.meta{color:var(--soft);font-size:15px;margin-top:6px}
+.text{display:grid;gap:16px}
+.text p{max-width:62ch}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:13px;font-weight:600;background:var(--tag);color:var(--ink);padding:4px 10px;border-radius:999px}
+
+.facts{margin:0;display:grid;gap:0;border-top:2px solid var(--ink)}
+.facts div{padding:14px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-weight:700}
+.facts dd{margin:2px 0 0;color:var(--soft);font-size:15.5px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15.5px}
+.steps li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:baseline}
+.steps .y{font-variant-numeric:tabular-nums;color:var(--soft);font-size:14.5px}
+.steps li.now .y{color:var(--accent-text);font-weight:700}
+.side{display:grid;gap:24px}
+.side h4{font-size:14px;font-weight:700;color:var(--soft);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+
+figure{margin:0}
+.shot{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.shot img{width:100%}
+figcaption{font-size:13.5px;color:var(--soft);line-height:1.45;margin-top:8px}
+
+.pair{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;align-items:start}
+
+/* speaker gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.gallery .g-main{grid-column:1 / 3;grid-row:1 / 3}
+.gallery .g-tall{grid-column:3;grid-row:1 / 3}
+.gallery figure:nth-child(2){grid-column:1 / 2}
+.gallery figure:nth-child(3){grid-column:2 / 4}
+/* stress tests */
+.tests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.test{border:1px solid var(--line);border-radius:12px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;background:var(--card)}
+.test .img{background:#fff;height:120px;display:grid;place-items:center;padding:10px;border-bottom:1px solid var(--line)}
+.test .img img{max-height:100px;max-width:170px;width:auto;height:auto;object-fit:contain}
+.test .body{padding:16px 18px 18px;display:grid;gap:10px;align-content:start}
+.test h4{font-size:18px}
+.test p{font-size:15px;color:var(--soft)}
+.readout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:4px}
+.readout div{background:var(--card);padding:8px 10px}
+.readout div:first-child{grid-column:1/-1}
+.readout small{display:block;font-size:11.5px;color:var(--soft);text-transform:uppercase;letter-spacing:.04em}
+.readout b{font-size:16px;font-variant-numeric:tabular-nums}
+.readout b.ok{color:var(--accent-text)}
+.takeaway{border-left:4px solid var(--orange);padding:4px 0 4px 16px;max-width:70ch}
+
+/* ---------- ESTEC slideshow band ---------- */
+.band{background:var(--navy);color:var(--on-navy)}
+.band .kicker{color:var(--orange)}
+.band .head p{color:var(--on-navy-soft)}
+.slider{position:relative}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;gap:16px;border-radius:14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center;display:grid;gap:12px}
+.frame{position:relative;background:var(--navy-2);border-radius:14px;aspect-ratio:3/2;overflow:hidden;border:1px solid var(--navy-line)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.slide figcaption{color:var(--on-navy-soft);font-size:15px;margin:0;display:flex;gap:12px;align-items:baseline}
+.slide figcaption b{color:var(--orange);font-variant-numeric:tabular-nums;font-weight:700;flex:none}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px}
+.dots{display:flex;gap:8px}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.28);padding:0;cursor:pointer}
+.dots button[aria-current="true"]{background:var(--orange);width:28px;border-radius:999px}
+.arrows{display:flex;gap:10px}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:var(--on-navy);font-size:20px;cursor:pointer;display:grid;place-items:center}
+.arrows button:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.arrows button:disabled{opacity:.35;cursor:default}
+
+/* ---------- smaller projects ---------- */
+.minor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
+.minor article{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.minor .img{background:#fff;border-bottom:1px solid var(--line);aspect-ratio:16/9;overflow:hidden}
+.minor .img img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+.minor .placeholder{display:grid;place-items:center;background:var(--tag);color:var(--soft);font-size:14px}
+.minor .body{padding:22px 24px 24px;display:grid;gap:8px;align-content:start}
+.minor h3{font-size:21px}
+.minor p{font-size:16px}
+
+/* ---------- CV ---------- */
+.cv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.cv > div{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:28px}
+.group{font-size:14px;font-weight:700;color:var(--soft);text-transform:uppercase;letter-spacing:.04em;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.job{padding-block:16px;border-bottom:1px solid var(--line);display:grid;gap:3px}
+.job:last-child{border-bottom:0;padding-bottom:0}
+.job .top{display:flex;justify-content:space-between;gap:4px 16px;flex-wrap:wrap;align-items:baseline}
+.job h4{font-size:18px;font-weight:650}
+.job .when{font-size:14.5px;color:var(--soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.job .where{font-size:15px;color:var(--soft)}
+.job p{font-size:16px;margin-top:4px}
+.note{display:inline-block;margin-top:8px;font-size:13.5px;font-weight:700;color:var(--on-orange);background:var(--orange);padding:3px 10px;border-radius:999px;justify-self:start}
+.skills{display:grid;gap:16px;padding-top:16px}
+.skills div{display:grid;gap:2px}
+.skills b{font-weight:700}
+.skills span{color:var(--soft);font-size:16px}
+
+/* ---------- contact ---------- */
+.contact{background:var(--orange);color:var(--on-orange);padding-block:72px 32px}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:start}
+.contact h2{font-size:clamp(36px,5.5vw,56px);line-height:1;letter-spacing:-.03em}
+.contact p{margin-top:16px;max-width:44ch;font-size:17.5px}
+.ways{border-top:2px solid var(--on-orange)}
+.way{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:18px;border-bottom:1px solid rgba(15,26,40,.25)}
+.way small{display:block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;opacity:.75}
+.way .v{font-size:19px;font-weight:600;word-break:break-word}
+.copy{font:inherit;font-size:14px;font-weight:700;padding:8px 16px;border-radius:999px;border:0;background:var(--on-orange);color:var(--orange);cursor:pointer}
+.copy:hover{opacity:.9}
+.contact :focus-visible{outline-color:var(--on-orange)}
+.foot{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;margin-top:56px;padding-top:18px;border-top:1px solid rgba(15,26,40,.25);font-size:14px;font-weight:500}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .project-top,.cv,.contact-grid,.pair{grid-template-columns:1fr}
+  .tests{grid-template-columns:1fr;max-width:520px}
+  .gallery{grid-template-columns:1fr}
+  .gallery figure,.gallery .g-main,.gallery .g-tall,.gallery figure:nth-child(2),.gallery figure:nth-child(3){grid-column:auto;grid-row:auto}
+  .gallery .g-tall{max-width:380px}
+  .hero::after{background:linear-gradient(0deg,rgba(9,18,32,.96) 0%,rgba(9,18,32,.9) 60%,rgba(9,18,32,.78) 100%)}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding-inline:16px}
+  .intro{padding-block:40px 64px}
+  section{padding-block:56px}
+  .project{padding:22px;border-radius:12px}
+  .cv > div{padding:22px}
+  .minor{grid-template-columns:1fr}
+  .frame{aspect-ratio:4/5}
+  .topbar nav{gap:4px 16px}
+}
+</style>
+<style>html{color-scheme:light dark}body{margin:0}</style>
+</head>
+<body>
+
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="name" href="#top">Thomas Gurney</a>
+      <nav aria-label="Sections">
+        <a href="#work">Projects</a>
+        <a href="#estec">ESTEC</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="intro">
+      <h1>Thomas Gurney<span>.</span></h1>
+      <p class="lede">I'm a third-year Aero-Mechanical Engineering student at the University of Strathclyde, and I lead assembly, integration and verification on STRATHcube, a student CubeSat in ESA's Fly Your Satellite! programme.</p>
+      <span class="now">Looking for a summer 2027 engineering placement</span>
+      <div class="links">
+        <a class="pill solid" href="#work">See my projects</a>
+        <a class="pill" href="https://www.linkedin.com/in/tom-gurney-eng" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+  <span class="credit">Final Design Review colocations, ESA ESTEC, April 2026</span>
+</header>
+
+<main>
+  <section id="work">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">Projects</span>
+        <h2>What I've been working on</h2>
+      </div>
+
+      <!-- STRATHcube -->
+      <article class="project">
+        <div class="project-top">
+          <div class="text">
+            <div>
+              <h3>STRATHcube</h3>
+              <p class="meta">Student satellite team, University of Strathclyde · 2024 to now</p>
+            </div>
+            <p>STRATHcube is a CubeSat designed and built by students at Strathclyde, and it's going through ESA's Fly Your Satellite! programme. I joined in my first year, co-led the AIV team through our Final Design Review, and I'm now leading AIV for 2026/27.</p>
+            <p>In April 2026 we took the design to ESA's ESTEC centre in the Netherlands for the Final Design Review. I presented to a panel of ESA engineers, and worked through the Review Item Discrepancies (RIDs) they raised with the team during the colocation week.</p>
+            <p>Most of my AIV work is making sure every requirement on the spacecraft has a way of being proven. I compiled our Technical Specification Verification Control Document (TS-VCD) to ECSS standards, which tracks each requirement and whether it's closed by test, analysis, design review or inspection.</p>
+            <div class="tags"><span>ECSS</span><span>TS-VCD</span><span>RID closure</span><span>SolidWorks</span></div>
+          </div>
+          <div class="side">
+            <div>
+              <h4>My role</h4>
+              <dl class="facts">
+                <div><dt>AIV lead, 2026/27</dt><dd>Co-lead through the Final Design Review</dd></div>
+                <div><dt>ESA Final Design Review</dt><dd>Presented at ESTEC, 13–17 April 2026</dd></div>
+                <div><dt>Verification to ECSS</dt><dd>Compiled the spacecraft TS-VCD and closed out RIDs</dd></div>
+              </dl>
+            </div>
+            <div>
+              <h4>Where the mission is</h4>
+              <ol class="steps">
+                <li><span class="y">Done</span><span>Final Design Review at ESTEC</span></li>
+                <li class="now"><span class="y">Now</span><span>Cleanroom procurement, AIV planning</span></li>
+                <li><span class="y">2027</span><span>Flight model build and testing</span></li>
+                <li><span class="y">~2030</span><span>Planned launch</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cleanroom -->
+      <article class="project">
+        <div class="text">
+          <div>
+            <h3>A cleanroom for building the satellite</h3>
+            <p class="meta">STRATHcube · 2026</p>
+          </div>
+          <p>You can't assemble flight hardware on an open bench, so STRATHcube needs its own cleanroom before the 2027 build. I've been working with external suppliers to design and source a 12&nbsp;m² ISO 7/8 cleanroom for assembly and testing.</p>
+          <p>It started with a measured sketch of the room: walls, radiators, windows, power and fire exits. The enclosure runs along the long wall between the two radiators, next to an existing power strip, which keeps the windows, sink and both fire exits clear. The supplier turned that layout into the design below, with an anteroom at the entrance. Procurement is under way.</p>
+        </div>
+        <div class="pair">
+          <figure>
+            <div class="shot"><img src="images/cleanroom-render.jpg" alt="3D render of a modular cleanroom enclosure with aluminium frame, clear upper panels, solid lower panels and an anteroom at one end" width="1400" height="1006"></div>
+            <figcaption>Supplier render of the proposed ISO 7/8 enclosure.</figcaption>
+          </figure>
+          <figure>
+            <div class="shot"><img src="images/cleanroom-sketch.jpg" alt="Hand-drawn floor plan of the room with measurements, and the proposed cleanroom area hatched in blue" width="775" height="1117"></div>
+            <figcaption>My original measured sketch of the room.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Speaker -->
+      <article class="project">
+        <div class="project-top solo">
+          <div class="text">
+            <div>
+              <h3>Portable speaker</h3>
+              <p class="meta">Advanced Higher Graphic Communication · Design project</p>
+            </div>
+            <p>For my Advanced Higher Graphic Communication project I designed a portable speaker from scratch: a cylindrical ABS body with passive radiators at each end and an aluminium carry handle. The project covered the full design package: a 3D model in Fusion 360, dimensioned engineering drawings, photorealistic renders, and marketing graphics for an imagined brand, SPKR.</p>
+            <p>To check the design would hold up in use, I ran static stress studies in Fusion 360 on the three parts most likely to fail. For each one I set the right material, fixed the model with constraints, and applied a load that matched real use.</p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="g-main"><div class="shot"><img src="images/spk-render.jpg" alt="Photorealistic render of the speaker with orange end caps, hexagonal mesh body and carry handle" width="1000" height="640"></div><figcaption>Final render in Fusion 360.</figcaption></figure>
+          <figure><div class="shot"><img src="images/spk-exploded.jpg" alt="A3 exploded-view drawing of the speaker with numbered parts and a parts list" width="1600" height="1100"></div><figcaption>Exploded view with parts list.</figcaption></figure>
+          <figure><div class="shot"><img src="images/spk-drawing.jpg" alt="Dimensioned A3 engineering drawing of the left speaker housing with sections and a spring detail" width="1600" height="1100"></div><figcaption>Housing drawing with stepped section and spring detail.</figcaption></figure>
+          <figure class="g-tall"><div class="shot"><img src="images/spk-poster.jpg" alt="Print poster for the SPKR speaker with the tagline New, Bold, Loud and print marks" width="946" height="1263"></div><figcaption>Print poster, with bleed and crop marks.</figcaption></figure>
+        </div>
+
+        <div class="tests">
+          <figure class="test">
+            <div class="img"><img src="images/stress-handle.jpg" alt="Fusion 360 stress plot of the speaker with the handle loaded, mostly blue with green on the grip" width="790" height="488"></div>
+            <div class="body">
+              <h4>Handle</h4>
+              <p>The full weight of the speaker applied upwards under the grip, as if someone were carrying it.</p>
+              <div class="readout"><div><small>Material</small><b>Aluminium</b></div><div><small>Load</small><b>64.3 N</b></div><div><small>Safety factor</small><b class="ok">15</b></div></div>
+            </div>
+          </figure>
+          <figure class="test">
+            <div class="img"><img src="images/stress-radiator.jpg" alt="Fusion 360 stress plot of the passive radiator, blue with a green ring on the rubber seal" width="760" height="434"></div>
+            <div class="body">
+              <h4>Passive radiator</h4>
+              <p>A finger pressing into the rubber seal at the centre, with the steel frame held in place.</p>
+              <div class="readout"><div><small>Material</small><b>Rubber</b></div><div><small>Load</small><b>5 N</b></div><div><small>Safety factor</small><b class="ok">5.42</b></div></div>
+            </div>
+          </figure>
+          <figure class="test">
+            <div class="img"><img src="images/stress-housing.jpg" alt="Fusion 360 stress plot of the main housing with a load on the control panel, light blue with a small red area under the load" width="678" height="406"></div>
+            <div class="body">
+              <h4>Main housing</h4>
+              <p>Someone leaning or standing on the control panel, with the base fixed.</p>
+              <div class="readout"><div><small>Material</small><b>ABS</b></div><div><small>Load</small><b>100 N</b></div><div><small>Safety factor</small><b class="ok">15</b></div></div>
+            </div>
+          </figure>
+        </div>
+        <p class="takeaway">None of the parts came close to failing. Fusion flagged the handle and housing as over-engineered, so the next design iteration would take material out of them. The housing did show a small peak in stress directly under the load, which is the spot I'd watch if the ABS got warm.</p>
+      </article>
+
+      <div class="minor">
+        <article>
+          <div class="img"><img src="images/hdrm-cad.jpg" alt="SolidWorks model of a hold-down and release mechanism, a rod held in two clips across the base of a CubeSat frame with red solar panels" width="880" height="526"></div>
+          <div class="body">
+            <h3>Solar array HDRM</h3>
+            <p class="meta">STRATHcube · SolidWorks</p>
+            <p>Designed and tested a hold-down and release mechanism that keeps the solar arrays stowed during launch and frees them once in orbit. I also looked into lightweight composites to improve the structure's thermal and structural performance.</p>
+          </div>
+        </article>
+        <article>
+          <div class="img"><img src="images/buggy-cad.jpg" alt="SolidWorks render of an RC buggy body shell with a roof light bar, bonnet scoop and flared wheel arches" width="800" height="430"></div>
+          <div class="body">
+            <h3>RC buggy</h3>
+            <p class="meta">Degree coursework · SolidWorks, manufacture</p>
+            <p>Modelled and manufactured a radio-controlled buggy as part of my course. I designed the body shell in SolidWorks, with a bonnet scoop, flared wheel arches and a roof-mounted light bar, then took it through to a physical build.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="estec">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">ESA ESTEC · April 2026</span>
+        <h2>Final Design Review week</h2>
+        <p>A week of colocations in Noordwijk with ESA engineers and the other Fly Your Satellite! teams.</p>
+      </div>
+      <div class="slider" id="slider" aria-roledescription="carousel" aria-label="Photos from ESTEC">
+        <div class="track" id="track" tabindex="0">
+          <figure class="slide" aria-roledescription="slide" aria-label="1 of 4">
+            <div class="frame"><img src="images/estec-presenting.jpg" alt="Presenting on stage in front of a spreadsheet of review items from several CubeSat teams" width="1050" height="1400"></div>
+            <figcaption><b>01</b>Presenting review findings to the room during the colocations.</figcaption>
+          </figure>
+          <figure class="slide" aria-roledescription="slide" aria-label="2 of 4">
+            <div class="frame"><img src="images/estec-workshop.jpg" alt="The team around a table of laptops while an ESA engineer draws a Gantt chart on a whiteboard" width="1800" height="1350"></div>
+            <figcaption><b>02</b>Planning work packages with an ESA engineer in the ESTEC hall.</figcaption>
+          </figure>
+          <figure class="slide" aria-roledescription="slide" aria-label="3 of 4">
+            <div class="frame"><img src="images/estec-mockup.jpg" alt="A group holding a Fly Your Satellite! Education CubeSats poster inside a space station module mock-up" width="933" height="1400"></div>
+            <figcaption><b>03</b>Inside the space station module mock-up at ESTEC.</figcaption>
+          </figure>
+          <figure class="slide" aria-roledescription="slide" aria-label="4 of 4">
+            <div class="frame"><img src="images/estec-exomars.jpg" alt="Large group photo of all the Fly Your Satellite! teams in front of an ExoMars display" width="1800" height="1350"></div>
+            <figcaption><b>04</b>All of this year's Fly Your Satellite! teams.</figcaption>
+          </figure>
+        </div>
+        <div class="controls">
+          <div class="dots" id="dots" role="group" aria-label="Choose a photo"></div>
+          <div class="arrows">
+            <button type="button" id="prev" aria-label="Previous photo">←</button>
+            <button type="button" id="next" aria-label="Next photo">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cv">
+    <div class="wrap">
+      <div class="head">
+        <span class="kicker">CV</span>
+        <h2>Education and experience</h2>
+      </div>
+      <div class="cv">
+        <div>
+          <h3 class="group">Education</h3>
+          <div class="job">
+            <div class="top"><h4>MEng Aero-Mechanical Engineering</h4><span class="when">2024 – now</span></div>
+            <div class="where">University of Strathclyde, Glasgow</div>
+            <p>Modules include Flight &amp; Spaceflight, Heat &amp; Flow, Engineering Mechanics and Aero Design, plus mechanics and thermodynamics lab work.</p>
+            <span class="note">Distinction in years 1 and 2</span>
+          </div>
+          <h3 class="group" style="margin-top:28px">Skills</h3>
+          <div class="skills">
+            <div><b>CAD and manufacture</b><span>SolidWorks (CSWA certified), Fusion 360, Ultimaker Cura</span></div>
+            <div><b>Analysis and programming</b><span>Ansys, Fusion 360 simulation, MATLAB, Python</span></div>
+            <div><b>Space engineering</b><span>ECSS verification, TS-VCD, RID closure, cleanroom specification</span></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="group">Work</h3>
+          <div class="job">
+            <div class="top"><h4>Lifeguard Counsellor</h4><span class="when">Jun – Aug 2026</span></div>
+            <div class="where">Berkshire Trails Camp, Massachusetts</div>
+            <p>Pool and waterfront lifeguard, sharing responsibility for the safety of children aged 7 to 11 over a full summer season.</p>
+          </div>
+          <div class="job">
+            <div class="top"><h4>Event Steward</h4><span class="when">Mar 2025 – now</span></div>
+            <div class="where">G4S, Glasgow</div>
+            <p>Access control and crowd safety for 200+ people a shift.</p>
+          </div>
+          <div class="job">
+            <div class="top"><h4>Food &amp; Beverage Assistant</h4><span class="when">Mar 2025 – now</span></div>
+            <div class="where">LGH Hotel Management, Glasgow</div>
+            <p>Bartending for 50+ customers a shift, handling orders, payments and stock.</p>
+          </div>
+          <div class="job">
+            <div class="top"><h4>Customer Assistant</h4><span class="when">Oct 2023 – Sep 2024</span></div>
+            <div class="where">Marks &amp; Spencer, Linlithgow</div>
+            <p>Part of the founding team for a new store, trained up ahead of a fixed opening date.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2>Get in touch</h2>
+        <p>If you'd like to talk about a placement, STRATHcube or anything here, email is the quickest way to reach me. I'm happy to send a full CV.</p>
+      </div>
+      <div class="ways">
+        <div class="way">
+          <div><small>Email</small><span class="v" id="email">tom.gurney19@gmail.com</span></div>
+          <button class="copy" type="button" id="copyEmail">Copy</button>
+        </div>
+        <div class="way">
+          <div><small>LinkedIn</small><a class="v" href="https://www.linkedin.com/in/tom-gurney-eng" target="_blank" rel="noopener">tom-gurney-eng ↗</a></div>
+        </div>
+        <div class="way">
+          <div><small>Based in</small><span class="v">Glasgow, Scotland</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>© 2026 Thomas Gurney</span><span>University of Strathclyde</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* slideshow */
+  var track=document.getElementById('track');
+  var slides=[].slice.call(track.children);
+  var dots=document.getElementById('dots');
+  var prev=document.getElementById('prev'), next=document.getElementById('next');
+  var current=0;
+  slides.forEach(function(s,i){
+    var b=document.createElement('button');
+    b.type='button'; b.setAttribute('aria-label','Photo '+(i+1));
+    b.addEventListener('click',function(){go(i);});
+    dots.appendChild(b);
+  });
+  function go(i){
+    i=Math.max(0,Math.min(slides.length-1,i));
+    track.scrollTo({left:slides[i].offsetLeft-track.offsetLeft,behavior:'smooth'});
+  }
+  function update(){
+    var w=track.clientWidth||1;
+    current=Math.round(track.scrollLeft/(w+16));
+    [].forEach.call(dots.children,function(d,i){d.setAttribute('aria-current',i===current?'true':'false');});
+    prev.disabled=current===0; next.disabled=current===slides.length-1;
+  }
+  var t; track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(update,60);},{passive:true});
+  prev.addEventListener('click',function(){go(current-1);});
+  next.addEventListener('click',function(){go(current+1);});
+  track.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'){e.preventDefault();go(current+1);}
+    if(e.key==='ArrowLeft'){e.preventDefault();go(current-1);}
+  });
+  window.addEventListener('resize',function(){go(current);});
+  update();
+
+  /* copy email */
+  var btn=document.getElementById('copyEmail'), el=document.getElementById('email');
+  function reset(){setTimeout(function(){btn.textContent='Copy';},1800);}
+  function selectIt(){var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';reset();}
+  btn.addEventListener('click',function(){
+    try{navigator.clipboard.writeText(el.textContent.trim()).then(function(){btn.textContent='Copied';reset();},selectIt);}catch(e){selectIt();}
+  });
+})();
+</script>
+
+</body>
+</html>
